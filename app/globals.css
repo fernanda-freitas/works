@@ -3,24 +3,71 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  font-size: 10px;
+  /* overscroll-behavior: none; */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-light: #C9C9C9;
+  --font-sans: var(--font-dm-sans);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --spacing-6: .6rem;
+  --spacing-8: .8rem;
+  --spacing-10: 1rem;
+  --spacing-12: 1.2rem;
+  --spacing-20: 2rem;
+  --spacing-40: 4rem;
+  --spacing-50: 5rem;
+
+  --breakpoint-414: 414px;
+  --breakpoint-768: 768px;
+  --breakpoint-1024: 1024px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overscroll-behavior: none;
+}
+
+
+@utility copy-lead {
+  font-size: utopia.clamp(32, 96);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+@utility copy-small {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.text-trim {
+  text-box-trim: trim-both;
+  text-box-edge: cap alphabetic;
+}
+
+.shiny-text {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.shiny-text-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(45deg, transparent 45%, rgba(0, 0, 0, 0.55) 49%, rgba(0, 0, 0, 0.55) 51%, transparent 55%);
+  mask-image: linear-gradient(45deg, transparent 45%, rgba(0, 0, 0, 0.55) 49%, rgba(0, 0, 0, 0.55) 51%, transparent 55%);
+  -webkit-mask-size: 150% auto;
+  mask-size: 150% auto;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  animation-name: shinyTextSweep;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
