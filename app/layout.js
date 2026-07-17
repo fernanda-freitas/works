@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "./components/Header";
-import Container from "./components/Container";
+import { ViewTransitions } from "next-view-transitions";
 
 const dmSans = localFont({
   src: [
@@ -32,16 +31,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${dmSans.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <Header />
-        <Container classNames="flex-1 flex flex-col">
+    <ViewTransitions>
+      <html
+        lang="en"
+        className={`${dmSans.variable} h-full antialiased`}
+      >
+        <body className="min-h-full flex flex-col">
           {children}
-        </Container>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
