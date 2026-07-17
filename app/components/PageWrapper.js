@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Header from "./Header";
+import Container from "./Container";
 
 const PageWrapper = ({ children, ...props }) => {
   return (
@@ -11,9 +12,12 @@ const PageWrapper = ({ children, ...props }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         {...props}
+        className="flex flex-col h-full"
       >
         <Header />
-        {children}
+        <Container>
+          {children}
+        </Container>
       </motion.div>
     </div>
   );
