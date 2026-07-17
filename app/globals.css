@@ -4,7 +4,6 @@
   --background: #ffffff;
   --foreground: #171717;
   font-size: 10px;
-  /* overscroll-behavior: none; */
 }
 
 @theme inline {
@@ -30,7 +29,6 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
-  overscroll-behavior: none;
 }
 
 
@@ -114,11 +112,11 @@ body {
   inline-size: var(--container-fill-text-available-space);
 
   /* Apply the calculated size with sensible fallbacks for no support */
-  font-size: var(--size-step-11);
+  font-size: utopia.clamp(48, 160);
 
   /* The initial fallback value for no support now becomes our minimum clamp value */
   font-size: clamp(
-    var(--size-step-11),
+    utopia.clamp(48, 160),
     1em * var(--container-fill-text-ratio),
     var(--container-fill-text-max-font-size, infinity * 1px)
   );
@@ -128,8 +126,4 @@ body {
   syntax: '<length>';
   initial-value: 0px;
   inherits: true;
-}
-
-span {
-  color: red;
 }
