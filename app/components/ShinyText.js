@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Photo from "@/public/photo.png";
+import Photo from '@/public/photo.png'
+
 import {
   motion,
   useMotionValue,
