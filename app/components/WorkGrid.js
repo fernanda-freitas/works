@@ -34,27 +34,33 @@ export default function WorkGrid({}) {
     return (
         <Grid className='mt-[4rem]'>
             {items.map((item, index) => (
-                <Link href={item.href} key={index} target="_blank" rel="noopener noreferrer" className="col-span-12 768:col-span-6 1024:col-span-3">
-                    <div className="relative w-full h-auto aspect-[334/462] rounded-[30] overflow-hidden bg-project-bg">
-                        {item.type === 'image' ? (
-                            <Image
-                                src={encodeURI(item.src)}
-                                alt=""
-                                fill
-                                className="object-cover"
-                            />
-                        ) : (
-                            <video
-                                src={encodeURI(item.src)}
-                                className="w-full h-full object-cover"
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                            />
-                        )}
-                    </div>
-                </Link>
+                <div key={index} className="col-span-12 768:col-span-6 1024:col-span-3">
+                    <Link href={item.href} className="group flex flex-col gap-y-10" target="_blank" rel="noopener noreferrer">
+                        <div className="relative w-full h-auto aspect-[334/462] rounded-[30] overflow-hidden bg-project-bg">
+                            {item.type === 'image' ? (
+                                <Image
+                                    src={encodeURI(item.src)}
+                                    alt=""
+                                    fill
+                                    className="object-cover"
+                                />
+                            ) : (
+                                <video
+                                    src={encodeURI(item.src)}
+                                    className="w-full h-full object-cover"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                />
+                            )}
+                        </div>
+                        <div className="flex flex-col gap-y-6">
+                            <p className="copy-small font-normal">Lorem ipsum dolor</p>
+                            <span className="copy-small font-normal text-light">2026</span>
+                        </div>
+                    </Link>
+                </div>
             ))}
         </Grid>
     )

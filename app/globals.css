@@ -48,6 +48,11 @@ body {
   line-height: 1;
 }
 
+@utility copy-extra-small {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
 .text-trim {
   text-box-trim: trim-both;
   text-box-edge: cap alphabetic;
