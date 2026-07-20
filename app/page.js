@@ -5,6 +5,7 @@ import ShinyText from "./components/ShinyText";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import PageWrapper from "./components/PageWrapper";
+import Container from "./components/Container";
 
 const SENTENCE_LOCK_MS = 700;
 const TOUCH_THRESHOLD_PX = 30;
@@ -53,22 +54,25 @@ export default function Home() {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col justify-between flex-1 h-full">
-        <PageHeader text="Hello,"/>
-        <p className="copy-lead font-semibold max-w-[21ch]">I'm a <ShinyText text="codebuilder" /> and I believe that <AnimatePresence mode="wait">
-          <motion.span
-            key={sentenceIndex}
-            className="text-light"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.1 }}
-          >
-            {sentences[sentenceIndex]}
-          </motion.span>
-        </AnimatePresence></p>
-        <span className="copy-small font-normal">Currently at <Link href="https://v-a.studio/" rel="noopener noreferrer" target="_blank">@V-A Studio</Link></span>
-      </div>
+        <Container classNames='flex flex-col flex-1 justify-between'>
+          <PageHeader text="Hello,"/>
+          <p className="copy-lead font-semibold max-w-[21ch]">I'm a {' '}
+            <ShinyText text="codebuilder" /> and I believe that {' '}
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={sentenceIndex}
+                className="text-light"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.1 }}
+              >
+                {sentences[sentenceIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </p>
+          <span className="copy-small font-normal">Currently at <Link href="https://v-a.studio/" rel="noopener noreferrer" target="_blank">@V-A Studio</Link></span>
+        </Container>
     </PageWrapper>
   );
 }

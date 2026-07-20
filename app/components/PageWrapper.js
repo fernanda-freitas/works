@@ -6,18 +6,16 @@ import Container from "./Container";
 
 const PageWrapper = ({ children, ...props }) => {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen flex flex-col">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1 }}
         {...props}
-        className="flex flex-col h-full"
+        className="contents"
       >
         <Header />
-        <Container>
-          {children}
-        </Container>
+        {children}
       </motion.div>
     </div>
   );

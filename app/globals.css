@@ -10,23 +10,28 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-light: #C9C9C9;
+  --color-project-bg: #f2f2f7;
   --font-sans: var(--font-dm-sans);
 
   --spacing-6: .6rem;
   --spacing-8: .8rem;
   --spacing-10: 1rem;
   --spacing-12: 1.2rem;
+  --spacing-16: 1.6rem;
   --spacing-20: 2rem;
+  --spacing-24: 2.4rem;
   --spacing-40: 4rem;
   --spacing-50: 5rem;
 
   --breakpoint-414: 414px;
   --breakpoint-768: 768px;
   --breakpoint-1024: 1024px;
+
+  --radius-50: 5rem;
 }
 
 body {
-  background: var(--background);
+  background: black;
   color: var(--foreground);
   font-family: var(--font-sans);
 }
