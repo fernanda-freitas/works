@@ -16,7 +16,7 @@ export default function Logo() {
                     onTransitionReady: pageAnimation,
                 });
             }}
-            aria-label="Go to homepage" href="/" className="copy-small font-bold">
+            aria-label="Go to homepage" href="/" className="copy-small font-bold generic-hover">
             F-©{year}
         </Link>
     )
