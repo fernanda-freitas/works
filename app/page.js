@@ -71,7 +71,7 @@ export default function Home() {
               </motion.span>
             </AnimatePresence>
           </p>
-          <span className="copy-small font-normal">Currently at <Link href="https://v-a.studio/" rel="noopener noreferrer" target="_blank">@V-A Studio</Link></span>
+          <span className="copy-small font-normal">Currently at <Link className="generic-hover" href="https://v-a.studio/" rel="noopener noreferrer" target="_blank">@V-A Studio</Link></span>
         </Container>
     </PageWrapper>
   );

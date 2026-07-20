@@ -17,7 +17,7 @@ export default function About() {
                     <div className="col-span-3 768:col-span-4 1024:col-span-2">
                         <p className="copy-large">Fernanda Freitas</p>
                     </div>
-                    <div className="col-span-9 768:col-span-8 1024:col-span-4 flex flex-col gap-y-20">
+                    <div className="col-span-9 768:col-span-8 1024:col-span-5 flex flex-col gap-y-20">
                         <p className="copy-large">
                             I'm a Frontend Developer who tries to bridge the gap between design and code.
                             With 8 years shaping user experiences and 4 years bringing them to life with modern technologies, I don't just build websites—I craft digital experiences that look stunning and work flawlessly.
