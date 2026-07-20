@@ -36,6 +36,8 @@ const items = [
     { type: 'image', src: '/projects/blue-oasis.png', href: 'https://blueoasis.tech/', title: 'Blue OASIS', date: '2025' },
 ]
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
+
 export default function WorkGrid({}) {
     const [hovered, setHovered] = useState(null)
 
@@ -59,14 +61,14 @@ export default function WorkGrid({}) {
                                 <div className="relative h-[calc(100%-24px)] w-full overflow-hidden rounded-[10] bg-project-bg transition-[height] duration-167 ease-linear 768:h-full 768:group-hover:h-[calc(100%-24px)]">
                                     {item.type === 'image' ? (
                                         <Image
-                                            src={encodeURI(item.src)}
+                                            src={encodeURI(`${basePath}${item.src}`)}
                                             alt=""
                                             fill
                                             className="object-cover"
                                         />
                                     ) : (
                                         <video
-                                            src={encodeURI(item.src)}
+                                            src={encodeURI(`${basePath}${item.src}`)}
                                             className="w-full h-full object-cover"
                                             autoPlay
                                             loop

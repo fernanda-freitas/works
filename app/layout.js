@@ -24,20 +24,22 @@ const dmSans = localFont({
   display: "swap",
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata = {
   title: "Fernanda Freitas — Codebuilder",
   description: "Portfolio of Fernanda Freitas, a codebuilder currently at V-A Studio.",
   icons: {
     icon: [
-      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: `${basePath}/favicon/favicon-96x96.png`, sizes: "96x96", type: "image/png" },
+      { url: `${basePath}/favicon/favicon.svg`, type: "image/svg+xml" },
     ],
-    shortcut: "/favicon/favicon.ico",
+    shortcut: `${basePath}/favicon/favicon.ico`,
     apple: [
-      { url: "/favicon/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: `${basePath}/favicon/apple-touch-icon.png`, sizes: "180x180", type: "image/png" },
     ],
   },
-  manifest: "/favicon/site.webmanifest",
+  manifest: `${basePath}/favicon/site.webmanifest`,
 };
 
 export default function RootLayout({ children }) {
