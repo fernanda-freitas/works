@@ -74,11 +74,11 @@ export default function WorkGrid({}) {
                                             playsInline
                                         />
                                     )}
-                                    <div
+                                    {/* <div
                                         className={`pointer-events-none absolute inset-0 z-10 hidden bg-black/50 transition-opacity duration-167 ease-linear 768:block ${
                                             hovered !== null && hovered !== index ? "opacity-100" : "opacity-0"
                                         }`}
-                                    />
+                                    /> */}
                                 </div>
                             </div>
                             <div className="absolute bottom-0 left-0 w-full flex flex-row justify-between gap-x-6 transition-opacity duration-167 ease-linear 768:opacity-0 768:group-hover:opacity-100 768:group-hover:delay-167">
