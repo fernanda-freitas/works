@@ -45,13 +45,13 @@ body {
 }
 
 @utility copy-large {
-  font-size: 1.8rem;
-  line-height: 1;
+  font-size: utopia.clamp(25.6, 28.8);
+  line-height: 1.4;
 }
 
 @utility copy-small {
   font-size: 1.6rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 @utility copy-extra-small {
