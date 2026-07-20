@@ -1,10 +1,10 @@
-const basePath = "/works";
+const basePath = process.env.GITHUB_PAGES === "true" ? "/works" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
   basePath,
-  assetPrefix: `${basePath}/`,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
   trailingSlash: true,
   images: {
     unoptimized: true,

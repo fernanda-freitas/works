@@ -74,8 +74,9 @@ export default function ShinyText({
         {text}
       </span>
       <motion.span
-        className="absolute top-0 left-0 pointer-events-none block"
+        className="absolute top-0 left-0 pointer-events-none block opacity-0"
         style={{ x, y, rotate }}
+        initial={{ opacity: 0 }}
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.2 }}
       >
